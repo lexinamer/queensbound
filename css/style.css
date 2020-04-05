@@ -1,0 +1,136 @@
+body {
+  margin: 0;
+  background: black;
+  font-family: 'Lato', sans-serif;
+}
+
+.header {
+  position: absolute;
+  bottom: 50px;
+  left: 20px;
+  color: white;
+}
+
+.logo {
+  height: 40px;
+}
+
+.header p {
+  margin-bottom: 10px;
+  margin-left: 3px;
+}
+
+.datatest {
+  background: white;
+}
+
+.lightbox {
+  display: none;
+}
+
+.subwaymap {
+  width: 100%;
+  height: 100vh;
+}
+
+#markers path{
+  opacity: 20%;
+}
+
+.published {
+  opacity: 100% !important;
+  cursor: pointer;
+  stroke-width: 11px;
+  stroke: white;
+}
+
+.published:hover {
+  stroke-width: 11px;
+  stroke: grey;
+  fill: grey !important;
+}
+
+.subwayline:hover {
+  /* stroke: white; */
+  cursor: pointer;
+}
+
+/* Modal Content */
+.stop-banner {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  left: 0;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 13px;
+  padding-left: 20px;
+}
+
+.poem-info {
+  margin-top: 30px;
+  display: flex;
+}
+
+.poem, .poet {
+  flex: 1 1 0px;
+}
+
+.poem {
+  margin-right: 5%;
+}
+
+/* Line Background Colors  */
+.seven-line {
+  background: #b934ad;
+}
+
+.n-line, .w-line, .r-line {
+  background: #fccc0a;
+}
+
+.m-line, .f-line {
+  background: #ff6319;
+}
+
+.e-line, .a-line {
+  background: #0039a7;
+}
+
+.j-line, .z-line {
+  background: #996633;
+}
+
+.g-line {
+  background: #6cbf46;
+}
+
+.s-line {
+  background: #7f8082;
+}
+
+.airtrain {
+  background: #02705f;
+}
+
+
+/* Mobile  */
+@media(max-width: 767px) {
+  .header {
+    position: static;
+  }
+
+  .subwaymap {
+    display: none;
+  }
+
+  .mobile-stop {
+    color: white;
+  }
+
+  .poem-info {
+    display: block;
+  }
+}
