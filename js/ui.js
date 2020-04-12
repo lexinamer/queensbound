@@ -48,6 +48,9 @@ function processMap(poemArray) {
 // Publish poems for mobile view
 function processMobile(poemArray) {
   for (let i = 0; i < poemArray.length; i++) {
+    // poemArray.sort((a, b) => (a.SubwayLine > b.SubwayLine) ? 1 : -1)
+    // console.log(poemArray);
+
     let stopPoint = $('<p>' + poemArray[i].SubwayStop + '</p>');
 
     stopPoint.addClass('published mobile-stop').attr({
