@@ -90,6 +90,10 @@ body {
   margin-top: 0;
 }
 
+.featherlight .featherlight-content {
+  height: 90%;
+}
+
 /* Line Background Colors  */
 .seven-line {
   background: #b934ad;
