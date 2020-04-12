@@ -137,4 +137,22 @@ body {
   .poem-info {
     display: block;
   }
+
+  .mobile-stop {
+    display: block;
+    color: black;
+    text-decoration: none;
+    margin: 10px;
+  }
+
+  .mobile-line {
+    padding: 5px 10px;
+    margin-top: 25px 0 0 0;
+    color: white;
+    text-transform: capitalize;
+  }
+
+  .mobile-stop:hover {
+    color: grey;
+  }
 }

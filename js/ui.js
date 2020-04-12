@@ -47,19 +47,38 @@ function processMap(poemArray) {
 
 // Publish poems for mobile view
 function processMobile(poemArray) {
+
+  // Break up JSON data into objects by subway line
+  let subwaylines = {};
   for (let i = 0; i < poemArray.length; i++) {
-    // poemArray.sort((a, b) => (a.SubwayLine > b.SubwayLine) ? 1 : -1)
-    // console.log(poemArray);
-
-    let stopPoint = $('<p>' + poemArray[i].SubwayStop + '</p>');
-
-    stopPoint.addClass('published mobile-stop').attr({
-      "href": "#",
-      "data-featherlight": '#' + poemArray[i].Webcode
-    });
-
-    $('.mobile').append(stopPoint);
+    var item = poemArray[i];
+    var x = poemArray[i].SubwayLine;
+    if (!(x in subwaylines)) subwaylines[x] = [];
+    subwaylines[x].push(item);
   }
+
+  // Loop through new data to populate subway stops
+  subwaylines = Object.keys(subwaylines).forEach(function(key, i) {
+    // Prep subwayline json data for print
+    var line = key;
+    var edit = key.replace(/-/g,' ');
+
+    // Append subway line label to body
+    $('.mobile').append(`<p class="mobile-line ${line}">${edit}</p>`);
+
+    // Loop through the subwaylines objects to create modal triggers
+    $(subwaylines[key]).each(function(){
+      let stop = this.SubwayStop;
+      let trigger = $(`<a>${stop}</a>`);
+      trigger.addClass('published mobile-stop').attr({
+        "href": "#",
+        "data-featherlight": '#' + this.Webcode
+      });
+
+      // Append modal trigger to body
+      $('.mobile').append(trigger);
+    });
+  })
 }
 
 // Create Modal
