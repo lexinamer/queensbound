@@ -1,6 +1,6 @@
 var mapContainer = $('.map');
 
-d3.xml("/queensbound/assets/subwaymap.svg", function(error, subwayMap) {
+d3.xml("/assets/subwaymap.svg", function(error, subwayMap) {
   if (error) throw error;
   $('.map').append(subwayMap.documentElement);
 
