@@ -1,18 +1,24 @@
 body {
   margin: 0;
-  /* background: black; */
   font-family: 'Lato', sans-serif;
+  line-height: 1.5em;
 }
 
 .header {
-  position: absolute;
+  left: 50px;
   bottom: 50px;
-  left: 20px;
-  /* color: white; */
+  position: absolute;
+  max-width: 480px;
+}
+
+.tagline {
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 0;
 }
 
 .logo {
-  height: 40px;
+  height: 38px;
 }
 
 .header p {
@@ -47,7 +53,6 @@ body {
 }
 
 .subwayline:hover {
-  /* stroke: white; */
   cursor: pointer;
 }
 
@@ -74,8 +79,8 @@ body {
   flex: 1 1 0px;
 }
 
-.poety {
-  padding-top: 15px;
+.poet {
+  padding-top: 65px;
 }
 
 .poem {
@@ -132,6 +137,11 @@ body {
 @media(max-width: 767px) {
   .header {
     position: static;
+    padding-left: 10px;
+  }
+
+  .instructions {
+    display: none;
   }
 
   .subwaymap {
@@ -158,5 +168,9 @@ body {
 
   .mobile-stop:hover {
     color: grey;
+  }
+
+  .poet {
+    padding-top: 20px;
   }
 }
