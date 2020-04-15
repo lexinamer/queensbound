@@ -42,14 +42,18 @@ body {
 .published {
   opacity: 100% !important;
   cursor: pointer;
-  stroke-width: 7px;
+  fill: #6bbf45 !important;
   stroke: black;
+  stroke-width: 1px;
+  -webkit-transform: scale(2);
+  -webkit-transform-origin: 50% 50%;
+  transform: scale(2);
+  transform-origin: 50% 50%;
+  transform-box: fill-box;
 }
 
 .published:hover {
-  stroke-width: 7px;
-  stroke: grey;
-  fill: grey !important;
+  fill: black !important;
 }
 
 .subwayline:hover {
