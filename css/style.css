@@ -56,9 +56,9 @@ body {
   fill: black !important;
 }
 
-.subwayline:hover {
+/* .subwayline:hover {
   cursor: pointer;
-}
+} */
 
 /* Modal Content */
 .stop-banner {
