@@ -6,7 +6,7 @@ body {
 
 .header {
   left: 50px;
-  bottom: 50px;
+  bottom: 20px;
   position: absolute;
   max-width: 480px;
 }
