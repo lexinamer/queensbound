@@ -42,7 +42,7 @@ body {
 .published {
   opacity: 100% !important;
   cursor: pointer;
-  fill: #6bbf45 !important;
+  fill: white !important;
   stroke: black;
   stroke-width: 1px;
   -webkit-transform: scale(2);
@@ -50,7 +50,20 @@ body {
   transform: scale(2);
   transform-origin: 50% 50%;
   transform-box: fill-box;
+  /* animation: leaves 5s linear forwards;
+  -webkit-animation: leaves 5s linear forwards; */
 }
+
+/* @keyframe leaves {
+  0% {
+      transform: scale(10.0);
+      -webkit-transform: scale(10.0);
+  }
+  100% {
+      transform: scale(2.0);
+      -webkit-transform: scale(2.0);
+  }
+} */
 
 .published:hover {
   fill: black !important;
@@ -58,7 +71,21 @@ body {
 
 /* .subwayline:hover {
   cursor: pointer;
+  transform: scale(2,2);
 } */
+
+.subwayline {
+  stroke-dasharray: 2000;
+  stroke-dashoffset: 2000;
+  animation: dash 5s linear forwards;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
 
 /* Modal Content */
 .stop-banner {
