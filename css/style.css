@@ -8,7 +8,7 @@ body {
   left: 50px;
   bottom: 20px;
   position: absolute;
-  max-width: 455px;
+  max-width: 478px;
 }
 
 .tagline {
@@ -18,7 +18,7 @@ body {
 }
 
 .logo {
-  height: 38px;
+  height: 39px;
 }
 
 .header p {
@@ -138,7 +138,7 @@ body {
 
 
 /* Mobile  */
-@media(max-width: 767px) {
+@media(max-width: 900px) {
   .header {
     position: static;
     padding-left: 10px;
