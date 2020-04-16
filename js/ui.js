@@ -96,3 +96,4 @@ function createModal(poemArray) {
 }
 
 $(document).ready(init);
+
