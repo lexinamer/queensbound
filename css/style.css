@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  font-size: 16px;
   font-family: 'Lato', sans-serif;
   line-height: 1.5em;
 }
@@ -9,6 +10,26 @@ body {
   bottom: 20px;
   position: absolute;
   max-width: 478px;
+}
+
+a {
+  color: black;
+  box-shadow: inset 0 -3px 0 -1px #000;
+  -webkit-transition: all .15s ease-in-out;
+  transition: all .15s ease-in-out;
+}
+
+a:hover {
+  box-shadow: inset 0 -23px 0 -1px #000;
+  color: white;
+  text-decoration: none;
+}
+
+.copyright {
+  position: absolute;
+  font-size: 14px;
+  bottom: 0;
+  right: 20px;
 }
 
 .tagline {
@@ -138,8 +159,14 @@ body {
 
 
 /* Mobile  */
-@media(max-width: 900px) {
+@media(max-width: 1024px) {
   .header {
+    max-width: 100%;
+    position: static;
+    padding: 10px;
+  }
+
+  .copyright {
     position: static;
     padding-left: 10px;
   }
